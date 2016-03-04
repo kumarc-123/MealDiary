@@ -15,6 +15,13 @@
 		AD29CD921C86F1EF0042149C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD29CD901C86F1EF0042149C /* LaunchScreen.storyboard */; };
 		AD29CD9D1C86F1EF0042149C /* MealDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD29CD9C1C86F1EF0042149C /* MealDiaryTests.m */; };
 		AD29CDA81C86F1EF0042149C /* MealDiaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD29CDA71C86F1EF0042149C /* MealDiaryUITests.m */; };
+		AD29CDB91C883D330042149C /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD29CDB51C883D330042149C /* JosefinSans-Bold.ttf */; };
+		AD29CDBA1C883D330042149C /* JosefinSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD29CDB61C883D330042149C /* JosefinSans-Italic.ttf */; };
+		AD29CDBB1C883D330042149C /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD29CDB71C883D330042149C /* JosefinSans-Light.ttf */; };
+		AD29CDBC1C883D330042149C /* JosefinSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD29CDB81C883D330042149C /* JosefinSans-Regular.ttf */; };
+		AD29CDBF1C88461D0042149C /* WebPageVCtr.m in Sources */ = {isa = PBXBuildFile; fileRef = AD29CDBE1C88461D0042149C /* WebPageVCtr.m */; };
+		AD29CDC41C8954AB0042149C /* HUDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AD29CDC11C8954AB0042149C /* HUDUtil.m */; };
+		AD29CDC51C8954AB0042149C /* Spinner.m in Sources */ = {isa = PBXBuildFile; fileRef = AD29CDC31C8954AB0042149C /* Spinner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,16 @@
 		AD29CDA31C86F1EF0042149C /* MealDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD29CDA71C86F1EF0042149C /* MealDiaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealDiaryUITests.m; sourceTree = "<group>"; };
 		AD29CDA91C86F1EF0042149C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD29CDB51C883D330042149C /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		AD29CDB61C883D330042149C /* JosefinSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Italic.ttf"; sourceTree = "<group>"; };
+		AD29CDB71C883D330042149C /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Light.ttf"; sourceTree = "<group>"; };
+		AD29CDB81C883D330042149C /* JosefinSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Regular.ttf"; sourceTree = "<group>"; };
+		AD29CDBD1C88461D0042149C /* WebPageVCtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPageVCtr.h; sourceTree = "<group>"; };
+		AD29CDBE1C88461D0042149C /* WebPageVCtr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPageVCtr.m; sourceTree = "<group>"; };
+		AD29CDC01C8954AB0042149C /* HUDUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDUtil.h; sourceTree = "<group>"; };
+		AD29CDC11C8954AB0042149C /* HUDUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDUtil.m; sourceTree = "<group>"; };
+		AD29CDC21C8954AB0042149C /* Spinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spinner.h; sourceTree = "<group>"; };
+		AD29CDC31C8954AB0042149C /* Spinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spinner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +122,18 @@
 				AD29CD861C86F1EF0042149C /* AppDelegate.m */,
 				AD29CD881C86F1EF0042149C /* ViewController.h */,
 				AD29CD891C86F1EF0042149C /* ViewController.m */,
+				AD29CDBD1C88461D0042149C /* WebPageVCtr.h */,
+				AD29CDBE1C88461D0042149C /* WebPageVCtr.m */,
+				AD29CDC01C8954AB0042149C /* HUDUtil.h */,
+				AD29CDC11C8954AB0042149C /* HUDUtil.m */,
+				AD29CDC21C8954AB0042149C /* Spinner.h */,
+				AD29CDC31C8954AB0042149C /* Spinner.m */,
 				AD29CD8B1C86F1EF0042149C /* Main.storyboard */,
 				AD29CD8E1C86F1EF0042149C /* Assets.xcassets */,
+				AD29CDB51C883D330042149C /* JosefinSans-Bold.ttf */,
+				AD29CDB61C883D330042149C /* JosefinSans-Italic.ttf */,
+				AD29CDB71C883D330042149C /* JosefinSans-Light.ttf */,
+				AD29CDB81C883D330042149C /* JosefinSans-Regular.ttf */,
 				AD29CD901C86F1EF0042149C /* LaunchScreen.storyboard */,
 				AD29CD931C86F1EF0042149C /* Info.plist */,
 				AD29CD821C86F1EF0042149C /* Supporting Files */,
@@ -243,7 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD29CDBA1C883D330042149C /* JosefinSans-Italic.ttf in Resources */,
 				AD29CD921C86F1EF0042149C /* LaunchScreen.storyboard in Resources */,
+				AD29CDB91C883D330042149C /* JosefinSans-Bold.ttf in Resources */,
+				AD29CDBB1C883D330042149C /* JosefinSans-Light.ttf in Resources */,
+				AD29CDBC1C883D330042149C /* JosefinSans-Regular.ttf in Resources */,
 				AD29CD8F1C86F1EF0042149C /* Assets.xcassets in Resources */,
 				AD29CD8D1C86F1EF0042149C /* Main.storyboard in Resources */,
 			);
@@ -272,7 +303,10 @@
 			files = (
 				AD29CD8A1C86F1EF0042149C /* ViewController.m in Sources */,
 				AD29CD871C86F1EF0042149C /* AppDelegate.m in Sources */,
+				AD29CDC41C8954AB0042149C /* HUDUtil.m in Sources */,
+				AD29CDBF1C88461D0042149C /* WebPageVCtr.m in Sources */,
 				AD29CD841C86F1EF0042149C /* main.m in Sources */,
+				AD29CDC51C8954AB0042149C /* Spinner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
