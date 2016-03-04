@@ -33,6 +33,10 @@
     
     [_webView loadRequest:[NSURLRequest requestWithURL:_webUrl]];
     
+    
+    _webView.scrollView.bounces = NO;
+    _webView.scrollView.showsHorizontalScrollIndicator = NO;
+    
     self.title = @"MEAL DIARIES";
 }
 
