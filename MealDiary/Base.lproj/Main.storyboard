@@ -17,7 +17,7 @@
         <!--View Controller-->
         <scene sceneID="Tke-nv-o17">
             <objects>
-                <viewController id="Hpu-uy-5fK" customClass="ViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Hpu-uy-5fK" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J47-Y4-2uv"/>
                         <viewControllerLayoutGuide type="bottom" id="pzz-0z-VFD"/>
@@ -32,7 +32,7 @@
                                 <color key="separatorColor" red="0.039215686270000001" green="0.59607843140000005" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="oNQ-sZ-Vbq">
-                                        <rect key="frame" x="0.0" y="113.5" width="320" height="70"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oNQ-sZ-Vbq" id="jqO-Ll-YSt">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
@@ -73,6 +73,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="tableView" destination="kHx-wX-9Xr" id="UxW-iz-4fk"/>
                         <segue destination="Iuc-tc-aCK" kind="show" identifier="menu_to_web" id="qDY-zB-9R6"/>
                     </connections>
                 </viewController>

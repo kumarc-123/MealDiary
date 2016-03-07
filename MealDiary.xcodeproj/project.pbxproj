@@ -446,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MealDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdeyeinc.sampledata.MealDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MealDiary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thirdeyeinc.sampledata.MealDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -530,6 +532,7 @@
 				AD29CDAE1C86F1EF0042149C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD29CDAF1C86F1EF0042149C /* Build configuration list for PBXNativeTarget "MealDiaryTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +541,7 @@
 				AD29CDB11C86F1EF0042149C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD29CDB21C86F1EF0042149C /* Build configuration list for PBXNativeTarget "MealDiaryUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +550,7 @@
 				AD29CDB41C86F1EF0042149C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

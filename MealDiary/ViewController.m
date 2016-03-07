@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "WebPageVCtr.h"
+#import "HUDUtil.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 {
     NSInteger selectedRow;
 }
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) NSDictionary *mainMenu;
 
 @property (nonatomic, strong) NSArray *titles;
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -27,16 +30,17 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _mainMenu = @{
+                  @"Call now"               : @"tel:789-981-0010",
                   @"Home"                   : @"http://mealdiaries.com/index.php/home",
                   @"Menu"                   : @"http://mealdiaries.com/index.php/home",
                   @"Why Meals Diaries"      : @"http://mealdiaries.com/index.php/why-mealdiaries",
-                  @"How It Works?"         : @"http://mealdiaries.com/index.php/how-it-works",
+                  @"How It Works?"          : @"http://mealdiaries.com/index.php/how-it-works",
                   @"Celebration Diaries"    : @"http://mealdiaries.com/index.php/home",
                   @"Contact Us"             : @"http://mealdiaries.com/index.php/contacts",
                   @"Terms and Conditions"   : @"http://mealdiaries.com/index.php/terms-and-conditions"
                   };
     
-    _titles = @[@"Home", @"Menu", @"Why Meals Diaries", @"How It Works?", @"Celebration Diaries", @"Contact Us", @"Terms and Conditions"];
+    _titles = @[@"Call now", @"Home", @"Menu", @"Why Meals Diaries", @"How It Works?", @"Celebration Diaries", @"Contact Us", @"Terms and Conditions"];
     
     selectedRow = -1;
     
@@ -45,7 +49,6 @@
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
 }
-
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -79,6 +82,7 @@
 {
     self.navigationController.hidesBarsOnSwipe = NO;
     [super viewDidAppear:animated];
+    [HUDUtil hideProgressHUD:self];
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -105,14 +109,39 @@
     }
 
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    [self performSegueWithIdentifier:@"menu_to_web" sender:[_titles objectAtIndex:indexPath.row]];
+    if (indexPath.row != 0) {
+        [HUDUtil showBlockingHUD:self];
+        [self performSegueWithIdentifier:@"menu_to_web" sender:[_titles objectAtIndex:indexPath.row]];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message" message:@"Do you want call Meal Diaries \n(+91) 7899810010?" delegate:self cancelButtonTitle:@"Call now" otherButtonTitles:@"Later", nil];
+        [alert show];
+    }
 }
-
 
 - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     selectedRow = -1;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        NSURL *url = [NSURL URLWithString:[_mainMenu valueForKey:[_titles objectAtIndex:0]]];
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message" message:@"Can't make a call to \n(+91) 7899810010?" delegate:nil cancelButtonTitle:@"Call now" otherButtonTitles:@"Later", nil];
+            [alert show];
+        }
+    }
+    selectedRow = -1;
+    
+    [_tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -121,6 +150,8 @@
         WebPageVCtr *pageVCtr = [segue destinationViewController];
         pageVCtr.pageTitle = (NSString *) sender;
         pageVCtr.webUrl = [NSURL URLWithString:[_mainMenu valueForKey:(NSString *) sender]];
+        
+        [HUDUtil hideProgressHUD:self];
     }
 }
 
