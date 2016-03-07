@@ -30,7 +30,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _mainMenu = @{
-                  @"Call now"               : @"tel:789-981-0010",
+                  @"Call now"               : @"tel:+91-789-981-0010",
                   @"Home"                   : @"http://mealdiaries.com/index.php/home",
                   @"Menu"                   : @"http://mealdiaries.com/index.php/home",
                   @"Why Meals Diaries"      : @"http://mealdiaries.com/index.php/why-mealdiaries",
@@ -153,6 +153,11 @@
         
         [HUDUtil hideProgressHUD:self];
     }
+}
+
+- (UIStatusBarStyle) preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
